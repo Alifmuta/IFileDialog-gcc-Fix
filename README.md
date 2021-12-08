@@ -22,4 +22,4 @@ Then run test.exe:
 
 Voila!
 
-Please email me at mailto:digital.artist@hotmail.co.uk just to let me know my solution helped you. My name is Dave.
+Please email me at mailto:digital.artist@hotmail.co.uk just to let me know if my solution helped you. My name is Dave.
