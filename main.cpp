@@ -7,9 +7,8 @@
 static TCHAR szWindowClass[] = _T("GroovyApp");
 static TCHAR szTitle[] = _T("Yeah man, right on!!");
 HRESULT hr;
-LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
 
-// 
+
 int WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)	{
 	
 	IFileOpenDialog* pFileOpen;
@@ -60,33 +59,4 @@ int WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int n
 		
 	CoUninitialize();
 	return 0;
-}
-
-
-LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) {
-	
-   PAINTSTRUCT ps;
-   HDC hdc;
-   TCHAR greeting[] = _T("Hello, Manchester!! No, wait...");
-
-	switch (message)	{
-	   
-		case WM_PAINT:
-	   
-			hdc = BeginPaint(hWnd, &ps);
-			TextOut(hdc, 5, 5, greeting, _tcslen(greeting));
-			EndPaint(hWnd, &ps);
-			break;
-			
-		case WM_DESTROY:
-	   
-			PostQuitMessage(0);
-			break;
-		  
-		default:
-			return DefWindowProc(hWnd, message, wParam, lParam);
-			break;
-	}
-
-   return 0;
 }
