@@ -1,11 +1,13 @@
 #ifndef _IFileDialog_Fix_
 #define _IFileDialog_Fix_
 
+// 'shobjidl.h' line: 25174
 typedef enum FDAP {
     FDAP_BOTTOM = 0,
     FDAP_TOP = 1
 } FDAP;
 
+// 'shobjidl.h' line: 25405
 typedef enum FILEOPENDIALOGOPTIONS {
   FOS_OVERWRITEPROMPT,
   FOS_STRICTFILETYPES,
@@ -33,7 +35,7 @@ typedef enum FILEOPENDIALOGOPTIONS {
   
 } FILEOPENDIALOGOPTIONS;
 
-
+// 'shobjidl.h' line: 25432
 DEFINE_GUID(IID_IFileDialog, 0x42f85136, 0xdb7e, 0x439c, 0x85,0xf1, 0xe4,0x07,0x5d,0x13,0x5f,0xc8);
 MIDL_INTERFACE("42f85136-db7e-439c-85f1-e4075d135fc8")
 IFileDialog : public IModalWindow	{
@@ -113,6 +115,7 @@ IFileDialog : public IModalWindow	{
 };
 __CRT_UUID_DECL(IFileDialog, 0x42f85136, 0xdb7e, 0x439c, 0x85,0xf1, 0xe4,0x07,0x5d,0x13,0x5f,0xc8)
 
+// 'shobjidl.h' line: 26326
 DEFINE_GUID(IID_IFileOpenDialog, 0xd57c7288, 0xd4ad, 0x4768, 0xbe,0x02, 0x9d,0x96,0x95,0x32,0xd9,0x60);
 MIDL_INTERFACE("d57c7288-d4ad-4768-be02-9d969532d960")
 IFileOpenDialog : public IFileDialog	{
@@ -125,6 +128,7 @@ IFileOpenDialog : public IFileDialog	{
 };
 __CRT_UUID_DECL(IFileOpenDialog, 0xd57c7288, 0xd4ad, 0x4768, 0xbe,0x02, 0x9d,0x96,0x95,0x32,0xd9,0x60)
 
+// 'shobjidl.h' line: 25953
 DEFINE_GUID(IID_IFileSaveDialog, 0x84bccd23, 0x5fde, 0x4cdb, 0xae,0xa4, 0xaf,0x64,0xb8,0x3d,0x78,0xab);
 MIDL_INTERFACE("84bccd23-5fde-4cdb-aea4-af64b83d78ab")
 IFileSaveDialog : public IFileDialog	{
