@@ -22,4 +22,6 @@ Then run test.exe:
 
 Voila!
 
+I forgot to mention, there are some library files that ship with gcc that need to be on the command line invoking g++. See 'Makefile' for the necessary -l switches.
+
 Please email me at mailto:digital.artist@hotmail.co.uk just to let me know if my solution helped you. My name is Dave.
