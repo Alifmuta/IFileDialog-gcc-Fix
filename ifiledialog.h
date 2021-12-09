@@ -1,5 +1,5 @@
-#ifndef _IFileDialog_Fix_
-#define _IFileDialog_Fix_
+#ifndef _IFileDialog_Fix_ID
+#define _IFileDialog_Fix_ID
 
 // 'shobjidl.h' line: 25174
 typedef enum FDAP {
