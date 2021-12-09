@@ -19,7 +19,7 @@ Presumably, that would result in many existing failures to get mingw32 gcc to co
 To see it working, I have included a sample program in source code.
 
 The sample project, made up of files *main.cpp* and *Makefile*, and utilising *ifiledialog.h*, demonstrates the fix. Type:
-> make test
+> make
 
 Then run test.exe:
 > test

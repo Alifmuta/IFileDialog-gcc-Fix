@@ -53,7 +53,7 @@ int WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int n
 					*/
 					
 					MessageBoxW(NULL, pszFilePath, 	L"Selected File.", MB_OK);
-					CoTaskMemFree(pszFilePath);
+					//CoTaskMemFree(pszFilePath);
 				}
 			}
 			
