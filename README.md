@@ -7,12 +7,12 @@ I invested many minutes of research & dedicated time analyzing & testing the com
 
 I have a fix/solution for the problems people on the internet have had compiling a win32 app with (esp. MingW) gcc, that uses the COM Object "IFileDialog", and thus "IFileOpenDialog" and "IFileSaveDialog". All they need do is
 
-	\#include "ifiledialog.h"
+	#include "ifiledialog.h"
 
 , which will allow them to create IFileOpenDialog and IFileSaveDialog dialog boxes and open them on the screen.
 Also defines the IID_ and CLSID_ objects needed.
 
-My fix (which is simple, and gives clues as to what the problem is), can be used by some plucky programmer whose been tearing their hair out trying to do something that by rights should be easy & simple. (Hint:) They could also do the harder work of tracking down what the compile-time flags/constants/etc are that need to be defined/undefined/changed so that the conditional guards in 'shobjidl.h' will let the preprocessor get to the definitions of IFileDialog, IFIleOpenDialog and IFileSaveDialog. To help, the guards do allow the compiler to process "public IModalWindow", the interface IFileDialog inherits from (also defined in "shobjidl.h"). IFileOpenDialog & IFileSaveDialog inherit from IFileDialog.
+My fix (which is simple, and gives clues as to what the problem is), can be used by some plucky programmer whose been tearing their hair out trying to do something that by rights should be easy & simple. (Hint:) They could also do the harder work of tracking down what the compile-time flags/constants/etc are that need to be defined/undefined/changed so that the conditional guards in 'shobjidl.h' will let the preprocessor get to the definitions (NOT declerations, *definitions*) of IFileDialog, IFIleOpenDialog and IFileSaveDialog. To help, the guards do allow the compiler to process "public IModalWindow", the interface IFileDialog inherits from (also defined in "shobjidl.h"). IFileOpenDialog & IFileSaveDialog inherit from IFileDialog.
 
 Presumably, that would result in many existing failures to get mingw32 gcc to compile IFileDialog code, or even COM interfaces generally, fixed.
 

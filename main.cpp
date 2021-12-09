@@ -46,10 +46,10 @@ int WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int n
 				if (SUCCEEDED(hr))	{
 					
 					/*
-						Note: When using IFileSaveDialog, hr is only SUCCESS when you select an existing
-								file to overwrite, otherwise it'll return the equivalent of FALSE, meaning
-								this MsgBox will not appear.
-							  When using IFileOpenDialog, hr is SUCCESS upon the user selecting a file to open.
+						Note:	When using IFileSaveDialog, hr is only SUCCESS when you select an existing
+								file to overwrite (which won't be overwritten - it's a read operation, not a write operation),
+								otherwise it'll return the equivalent of FALSE, meaning this MsgBox will not appear.
+								When using IFileOpenDialog, hr is SUCCESS upon the user selecting a file to open.
 					*/
 					
 					MessageBoxW(NULL, pszFilePath, 	L"Selected File.", MB_OK);
