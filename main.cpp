@@ -1,13 +1,7 @@
 #include <Windows.h>
-#include <shobjidl.h> // IFileOpenDialog
-#include <tchar.h>
 #include <stdio.h>
+#include <shobjidl.h> // IFile([Open|Save]?)Dialog
 #include "ifiledialog.h"
-
-// Global variables
-static TCHAR szWindowClass[] = _T("GroovyApp");
-static TCHAR szTitle[] = _T("Yeah man, right on!!");
-HRESULT hr;
 
 
 int WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)	{
